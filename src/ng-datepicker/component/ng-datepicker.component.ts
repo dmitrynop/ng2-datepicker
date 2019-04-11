@@ -195,12 +195,12 @@ export class NgDatepickerComponent implements ControlValueAccessor, OnInit, OnCh
   }
 
   nextMonth(): void {
-    this.date = addMonths(this.date, 1);
+    this.date = addMonths(this.date || new Date(), 1);
     this.init();
   }
 
   prevMonth(): void {
-    this.date = subMonths(this.date, 1);
+    this.date = subMonths(this.date || new Date(), 1);
     this.init();
   }
 
